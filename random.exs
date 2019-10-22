@@ -2,9 +2,9 @@
 # To run this program run elixir random.exs
 
 print_random_number = fn() ->
-  {x, _} = IO.gets("Lower Limit:\n") |> Integer.parse
-  {y, _} = IO.gets("Higher Limit:\n") |> Integer.parse
-  Enum.random(x..y)
+  {low_limit, _} = IO.gets("Lower Limit:\n") |> Integer.parse
+  {high_limit, _} = IO.gets("Higher Limit:\n") |> Integer.parse
+  Enum.random(low_limit..high_limit)
 end
 
 IO.puts("\nRandom Number:  #{print_random_number.()}")
